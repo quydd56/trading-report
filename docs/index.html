@@ -10,22 +10,18 @@
   body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0d1117;color:#c9d1d9;line-height:1.5}
   a{color:#58a6ff;text-decoration:none}
 
-  /* Header */
   .header{background:linear-gradient(160deg,#0d1117 0%,#161b22 100%);border-bottom:1px solid #30363d;padding:20px 24px}
-  .header-inner{max-width:960px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+  .header-inner{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
   .header h1{font-size:1.1em;font-weight:700;color:#58a6ff;letter-spacing:.5px}
   .header .meta{font-size:.8em;color:#8b949e}
 
-  /* Layout */
-  .container{max-width:960px;margin:0 auto;padding:20px 16px;display:grid;gap:16px}
+  .container{max-width:1100px;margin:0 auto;padding:20px 16px;display:grid;gap:16px}
   .row2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
   .row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
 
-  /* Cards */
   .card{background:#161b22;border:1px solid #30363d;border-radius:12px;padding:18px;overflow:hidden}
   .card-title{font-size:.75em;font-weight:600;color:#8b949e;text-transform:uppercase;letter-spacing:.8px;margin-bottom:12px}
 
-  /* VN-Index hero */
   .vni-val{font-size:2.4em;font-weight:700;color:#e6edf3;line-height:1;margin-bottom:4px}
   .vni-chg{font-size:1em;font-weight:600;margin-bottom:12px}
   .vni-stats{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
@@ -33,7 +29,6 @@
   .stat-label{font-size:.7em;color:#8b949e;margin-bottom:2px}
   .stat-val{font-size:.9em;font-weight:600}
 
-  /* Signal */
   .signal-badge{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border-radius:24px;font-size:1.1em;font-weight:700;margin:8px 0 12px}
   .sig-green{background:#1a4731;color:#3fb950;border:1.5px solid #3fb950}
   .sig-yellow{background:#3d2c00;color:#d29922;border:1.5px solid #d29922}
@@ -46,33 +41,50 @@
   .badge-y{background:#3d2c00;color:#d29922}
   .badge-r{background:#3d0f0f;color:#f85149}
 
-  /* Breadth pills */
-  .breadth{display:flex;gap:8px;margin-top:8px}
-  .pill{flex:1;text-align:center;padding:8px;border-radius:8px;font-size:.85em;font-weight:600}
-  .pill-up{background:#1a4731;color:#3fb950}
-  .pill-dn{background:#3d0f0f;color:#f85149}
+  .breadth-row{display:flex;gap:8px;margin-top:10px}
+  .breadth-pill{flex:1;text-align:center;padding:8px 4px;border-radius:8px;font-size:.8em;font-weight:600}
+  .bp-buy{background:#1a4731;color:#3fb950}
+  .bp-watch{background:#3d2c00;color:#d29922}
+  .bp-skip{background:#21262d;color:#8b949e}
 
-  /* Tables */
-  table{width:100%;border-collapse:collapse;font-size:.88em}
-  th{font-size:.72em;font-weight:600;color:#8b949e;text-transform:uppercase;letter-spacing:.5px;padding:0 8px 8px;text-align:left;border-bottom:1px solid #30363d}
-  td{padding:8px;border-bottom:1px solid #21262d}
+  table{width:100%;border-collapse:collapse;font-size:.85em}
+  th{font-size:.7em;font-weight:600;color:#8b949e;text-transform:uppercase;letter-spacing:.5px;padding:0 6px 8px;text-align:left;border-bottom:1px solid #30363d;white-space:nowrap}
+  td{padding:7px 6px;border-bottom:1px solid #21262d;vertical-align:middle}
   tr:last-child td{border:none}
   tr:hover td{background:#1c2128}
-  .sym{font-weight:600;color:#e6edf3}
-  .num{text-align:right;font-variant-numeric:tabular-nums}
+  .sym{font-weight:600;color:#e6edf3;white-space:nowrap}
+  .num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
   .up{color:#3fb950}
   .dn{color:#f85149}
   .flat{color:#8b949e}
+  .meta-text{font-size:.72em;color:#8b949e;font-weight:400}
 
-  /* Chart */
+  .s-badge{font-size:.75em;font-weight:700;padding:2px 10px;border-radius:12px;white-space:nowrap}
+  .badge-buy{background:#1a4731;color:#3fb950;border:1px solid #3fb950}
+  .badge-watch{background:#3d2c00;color:#d29922;border:1px solid #d29922}
+  .badge-skip{background:#21262d;color:#8b949e;border:1px solid #484f58}
+
+  .score-bar-wrap{display:flex;align-items:center;gap:6px;justify-content:flex-end}
+  .score-bar{height:4px;border-radius:2px;background:linear-gradient(90deg,#3fb950,#d29922,#f85149);opacity:.7}
+
   .chart-wrap{position:relative;height:140px;margin-top:8px}
 
-  /* Footer */
+  .news-item{padding:6px 0;border-bottom:1px solid #21262d;font-size:.83em;line-height:1.4}
+  .news-item:last-child{border:none}
+  .news-date{color:#8b949e;font-size:.85em;margin-right:8px}
+
   .footer{text-align:center;color:#8b949e;font-size:.75em;padding:20px;border-top:1px solid #30363d;margin-top:4px}
+
+  .tab-bar{display:flex;gap:4px;margin-bottom:12px;border-bottom:1px solid #30363d;padding-bottom:8px}
+  .tab-btn{padding:4px 14px;border-radius:8px;font-size:.8em;font-weight:600;cursor:pointer;background:none;border:1px solid transparent;color:#8b949e}
+  .tab-btn.active{background:#21262d;color:#e6edf3;border-color:#484f58}
+  .tab-pane{display:none}
+  .tab-pane.active{display:block}
 
   @media(max-width:640px){
     .row2,.row3{grid-template-columns:1fr}
     .vni-val{font-size:1.9em}
+    td,th{padding:5px 3px}
   }
 </style>
 </head>
@@ -80,8 +92,8 @@
 
 <div class="header">
   <div class="header-inner">
-    <h1>Vietnam Trading Report</h1>
-    <div class="meta">Thursday, 18/06/2026 23:31 &nbsp;·&nbsp; <a href="https://quydd56.github.io/trading-report/">quydd56.github.io/trading-report</a></div>
+    <h1>🇻🇳 Vietnam Trading Report</h1>
+    <div class="meta">Thursday, 18/06/2026 23:55 &nbsp;·&nbsp; <a href="https://quydd56.github.io/trading-report/">quydd56.github.io</a></div>
   </div>
 </div>
 
@@ -90,46 +102,44 @@
   <!-- Row 1: VN-Index + Signal + Macro -->
   <div class="row3">
 
-    <!-- VN-Index card -->
     <div class="card">
       <div class="card-title">VN-Index</div>
-      <div class="vni-val">1,830.47</div>
-      <div class="vni-chg up">&nbsp;▲ 1.34% hom nay</div>
-      <div class="chart-wrap">
-        <canvas id="vniChart"></canvas>
-      </div>
+      <div class="vni-val">1,806.20</div>
+      <div class="vni-chg dn">&nbsp;▼ 0.10%</div>
+      <div class="chart-wrap"><canvas id="vniChart"></canvas></div>
       <div class="vni-stats">
-        <div class="stat-item"><div class="stat-label">Cao nhat</div><div class="stat-val">1,836.40</div></div>
-        <div class="stat-item"><div class="stat-label">Thap nhat</div><div class="stat-val">1,819.62</div></div>
-        <div class="stat-item"><div class="stat-label">MA5</div><div class="stat-val up">1,807.1</div></div>
-        <div class="stat-item"><div class="stat-label">MA20</div><div class="stat-val dn">1,831.5</div></div>
-        <div class="stat-item" style="grid-column:span 2"><div class="stat-label">Khoi luong</div><div class="stat-val">0.63B cp</div></div>
+        <div class="stat-item"><div class="stat-label">H</div><div class="stat-val">1,808.57</div></div>
+        <div class="stat-item"><div class="stat-label">L</div><div class="stat-val">1,787.89</div></div>
+        <div class="stat-item"><div class="stat-label">MA5</div><div class="stat-val up">1,801</div></div>
+        <div class="stat-item"><div class="stat-label">MA20</div><div class="stat-val dn">1,835</div></div>
+        <div class="stat-item" style="grid-column:span 2"><div class="stat-label">Vol</div><div class="stat-val">0.63B</div></div>
       </div>
     </div>
 
-    <!-- Signal card -->
     <div class="card">
       <div class="card-title">Tin hieu thi truong</div>
       <div style="margin-top:8px">
         <div class="signal-badge sig-red">
-          <div class="sig-dot"></div>
-          RED
+          <div class="sig-dot"></div>RED
         </div>
-        <div style="color:#8b949e;font-size:.85em;margin-bottom:16px">Thi truong yeu — can than</div>
+        <div style="color:#8b949e;font-size:.85em;margin-bottom:14px">Thi truong yeu — can than</div>
         <div class="rule-item"><span class="badge badge-g">GREEN</span><span>Giao dich binh thuong</span></div>
         <div class="rule-item"><span class="badge badge-y">YELLOW</span><span>Giam size 50%</span></div>
         <div class="rule-item"><span class="badge badge-r">RED</span><span>Khong mo vi the moi</span></div>
       </div>
-      <div style="margin-top:16px">
-        <div class="card-title" style="margin-bottom:8px">Co phieu theo doi</div>
-        <div class="breadth">
-          <div class="pill pill-up">▲ 1 Tang</div>
-          <div class="pill pill-dn">▼ 7 Giam</div>
+      <div style="margin-top:14px">
+        <div class="card-title" style="margin-bottom:6px">Screener — 54 co phieu</div>
+        <div class="breadth-row">
+          <div class="breadth-pill bp-buy">BUY<br><strong>0</strong></div>
+          <div class="breadth-pill bp-watch">WATCH<br><strong>8</strong></div>
+          <div class="breadth-pill bp-skip">SKIP<br><strong>46</strong></div>
+        </div>
+        <div style="margin-top:10px;font-size:.78em;color:#8b949e">
+          Theo doi: 20 tang / 34 giam
         </div>
       </div>
     </div>
 
-    <!-- Macro card -->
     <div class="card">
       <div class="card-title">Macro Quoc te</div>
       <table>
@@ -137,161 +147,968 @@
         
         <tr>
           <td class="sym">S&P 500</td>
-          <td class="num">7,495.31</td>
-          <td class="num up">▲ 1.01%</td>
+          <td class="num">7,493.27</td>
+          <td class="num up">▲ 0.99%</td>
         </tr>
         <tr>
           <td class="sym">Gold</td>
-          <td class="num">4,242.70</td>
-          <td class="num dn">▼ 2.67%</td>
+          <td class="num">4,239.80</td>
+          <td class="num dn">▼ 2.73%</td>
         </tr>
         <tr>
           <td class="sym">DXY</td>
-          <td class="num">100.78</td>
-          <td class="num up">▲ 0.69%</td>
+          <td class="num">100.75</td>
+          <td class="num up">▲ 0.66%</td>
         </tr>
         <tr>
           <td class="sym">Oil</td>
-          <td class="num">74.22</td>
-          <td class="num dn">▼ 3.35%</td>
+          <td class="num">73.88</td>
+          <td class="num dn">▼ 3.79%</td>
         </tr>
         <tr>
           <td class="sym">Silver</td>
-          <td class="num">66.09</td>
+          <td class="num">66.08</td>
           <td class="num dn">▼ 6.52%</td>
         </tr>
       </table>
+      <div style="margin-top:14px">
+        <div class="card-title" style="margin-bottom:6px">Tin tuc moi</div>
+        <div><div class="news-item"><span class="news-date">2026-10-15</span> Cái kết đắng của chủ chiếc KIA K5 độ xe nẹt pô ra lửa</div><div class="news-item"><span class="news-date">2026-08-31</span> Loạt ngân hàng trung ương dự kiến tăng mua vàng</div><div class="news-item"><span class="news-date">2026-08-17</span> Nóng: Tunisia bổ nhiệm cựu HLV CLB Nam Định Herve Renard ngay sau trận thua Thụy Điển</div><div class="news-item"><span class="news-date">2026-07-25</span> 5 dấu hiệu nhận biết gioăng cao su cửa ô tô bị mòn, cần thay thế</div><div class="news-item"><span class="news-date">2026-06-29</span> Nhận định Pháp vs Senegal: Mbappe và đồng đội có đi vào 'vết xe đổ'?</div><div class="news-item"><span class="news-date">2026-06-18</span> Xem nhanh 20h ngày 18.6: Giảm giá 4 lần, du thuyền Trương Mỹ Lan vẫn ế | Ronaldo có đáng bị chỉ trích?</div><div class="news-item"><span class="news-date">2026-06-18</span> Nghiên cứu tiết lộ 4 LOẠI thực phẩm giúp sống khỏe, sống thọ: Loại thứ 3 lại ít người Việt ưa chuộng</div><div class="news-item"><span class="news-date">2026-06-18</span> Cáp treo Fansipan sắp đón vị khách thứ 10 triệu</div></div>
+      </div>
     </div>
 
   </div>
 
-  <!-- Row 2: Stocks full width -->
+  <!-- Screener Table -->
   <div class="card">
-    <div class="card-title">Co phieu theo doi (8 ma)</div>
+    <div class="card-title">Screener — 54 Co phieu VN30/VN100 (18/06/2026)</div>
+    <div class="tab-bar">
+      <button class="tab-btn active" onclick="showTab('all',this)">Tat ca (54)</button>
+      <button class="tab-btn" onclick="showTab('buy',this)">BUY (0)</button>
+      <button class="tab-btn" onclick="showTab('watch',this)">WATCH (8)</button>
+      <button class="tab-btn" onclick="showTab('skip',this)">SKIP (46)</button>
+    </div>
+    <div style="overflow-x:auto">
     <table>
-      <tr><th>Ma</th><th class="num">Gia</th><th class="num">1 phien</th><th>Khoi luong</th></tr>
+      <tr>
+        <th>Ma</th><th>Tin hieu</th><th class="num">Diem</th>
+        <th class="num">Gia</th><th class="num">RSI14</th>
+        <th class="num">MACD</th><th class="num">Vol</th>
+        <th class="num">P/E</th><th class="num">ROE</th>
+      </tr>
       
+            <tr>
+              <td class="sym"><strong>HVN</strong><br><span class="meta-text">Hang khong</span></td>
+              <td><span class="s-badge badge-watch">WATCH</span></td>
+              <td class="num"><div class="score-bar-wrap"><div class="score-bar" style="width:57%"></div><span>57</span></div></td>
+              <td class="num">23</td>
+              <td class="num ">56.9</td>
+              <td class="num up">+0.254</td>
+              <td class="num">3.1x</td>
+              <td class="num">—</td>
+              <td class="num">—</td>
+            </tr>
+            <tr>
+              <td class="sym"><strong>HAH</strong><br><span class="meta-text">Van tai</span></td>
+              <td><span class="s-badge badge-watch">WATCH</span></td>
+              <td class="num"><div class="score-bar-wrap"><div class="score-bar" style="width:57%"></div><span>57</span></div></td>
+              <td class="num">56</td>
+              <td class="num ">55.4</td>
+              <td class="num up">+0.189</td>
+              <td class="num">2.1x</td>
+              <td class="num">11.3</td>
+              <td class="num">28.0%</td>
+            </tr>
+            <tr>
+              <td class="sym"><strong>TCH</strong><br><span class="meta-text">Khac</span></td>
+              <td><span class="s-badge badge-watch">WATCH</span></td>
+              <td class="num"><div class="score-bar-wrap"><div class="score-bar" style="width:55%"></div><span>55</span></div></td>
+              <td class="num">15</td>
+              <td class="num ">45.9</td>
+              <td class="num up">+0.071</td>
+              <td class="num">1.7x</td>
+              <td class="num">35.6</td>
+              <td class="num">14.0%</td>
+            </tr>
+            <tr>
+              <td class="sym"><strong>VGS</strong><br><span class="meta-text">Thep</span></td>
+              <td><span class="s-badge badge-watch">WATCH</span></td>
+              <td class="num"><div class="score-bar-wrap"><div class="score-bar" style="width:55%"></div><span>55</span></div></td>
+              <td class="num">22</td>
+              <td class="num ">49.8</td>
+              <td class="num up">+0.089</td>
+              <td class="num">1.5x</td>
+              <td class="num">14.3</td>
+              <td class="num">—</td>
+            </tr>
+            <tr>
+              <td class="sym"><strong>VSC</strong><br><span class="meta-text">Van tai</span></td>
+              <td><span class="s-badge badge-watch">WATCH</span></td>
+              <td class="num"><div class="score-bar-wrap"><div class="score-bar" style="width:52%"></div><span>52</span></div></td>
+              <td class="num">20</td>
+              <td class="num ">52.3</td>
+              <td class="num up">+0.140</td>
+              <td class="num">3.5x</td>
+              <td class="num">14.9</td>
+              <td class="num">12.0%</td>
+            </tr>
+            <tr>
+              <td class="sym"><strong>HDG</strong><br><span class="meta-text">Bat dong san</span></td>
+              <td><span class="s-badge badge-watch">WATCH</span></td>
+              <td class="num"><div class="score-bar-wrap"><div class="score-bar" style="width:52%"></div><span>52</span></div></td>
+              <td class="num">21</td>
+              <td class="num up">31.1</td>
+              <td class="num up">+0.009</td>
+              <td class="num">1.0x</td>
+              <td class="num">16.9</td>
+              <td class="num">23.0%</td>
+            </tr>
+            <tr>
+              <td class="sym"><strong>BIC</strong><br><span class="meta-text">Ngan hang</span></td>
+              <td><span class="s-badge badge-watch">WATCH</span></td>
+              <td class="num"><div class="score-bar-wrap"><div class="score-bar" style="width:50%"></div><span>50</span></div></td>
+              <td class="num">24</td>
+              <td class="num ">56.9</td>
+              <td class="num up">+0.002</td>
+              <td class="num">0.1x</td>
+              <td class="num">10.4</td>
+              <td class="num">16.0%</td>
+            </tr>
+            <tr>
+              <td class="sym"><strong>VNM</strong><br><span class="meta-text">Thuc pham</span></td>
+              <td><span class="s-badge badge-watch">WATCH</span></td>
+              <td class="num"><div class="score-bar-wrap"><div class="score-bar" style="width:50%"></div><span>50</span></div></td>
+              <td class="num">59</td>
+              <td class="num ">46.6</td>
+              <td class="num up">+0.160</td>
+              <td class="num">1.1x</td>
+              <td class="num">17.1</td>
+              <td class="num">—</td>
+            </tr>
+            <tr>
+              <td class="sym"><strong>BID</strong><br><span class="meta-text">Ngan hang</span></td>
+              <td><span class="s-badge badge-skip">SKIP</span></td>
+              <td class="num"><div class="score-bar-wrap"><div class="score-bar" style="width:49%"></div><span>49</span></div></td>
+              <td class="num">43</td>
+              <td class="num ">55.1</td>
+              <td class="num up">+0.049</td>
+              <td class="num">1.0x</td>
+              <td class="num">18.8</td>
+              <td class="num">13.0%</td>
+            </tr>
+            <tr>
+              <td class="sym"><strong>FRT</strong><br><span class="meta-text">Khac</span></td>
+              <td><span class="s-badge badge-skip">SKIP</span></td>
+              <td class="num"><div class="score-bar-wrap"><div class="score-bar" style="width:49%"></div><span>49</span></div></td>
+              <td class="num">132</td>
+              <td class="num ">53.6</td>
+              <td class="num up">+1.257</td>
+              <td class="num">1.7x</td>
+              <td class="num">17.8</td>
+              <td class="num">32.0%</td>
+            </tr>
+            <tr>
+              <td class="sym"><strong>NLG</strong><br><span class="meta-text">Bat dong san</span></td>
+              <td><span class="s-badge badge-skip">SKIP</span></td>
+              <td class="num"><div class="score-bar-wrap"><div class="score-bar" style="width:49%"></div><span>49</span></div></td>
+              <td class="num">28</td>
+              <td class="num ">57.4</td>
+              <td class="num up">+0.221</td>
+              <td class="num">1.2x</td>
+              <td class="num">18.4</td>
+              <td class="num">—</td>
+            </tr>
+            <tr>
+              <td class="sym"><strong>GVR</strong><br><span class="meta-text">Khac</span></td>
+              <td><span class="s-badge badge-skip">SKIP</span></td>
+              <td class="num"><div class="score-bar-wrap"><div class="score-bar" style="width:49%"></div><span>49</span></div></td>
+              <td class="num">36</td>
+              <td class="num ">53.6</td>
+              <td class="num up">+0.060</td>
+              <td class="num">0.8x</td>
+              <td class="num">26.9</td>
+              <td class="num">8.0%</td>
+            </tr>
+            <tr>
+              <td class="sym"><strong>STB</strong><br><span class="meta-text">Ngan hang</span></td>
+              <td><span class="s-badge badge-skip">SKIP</span></td>
+              <td class="num"><div class="score-bar-wrap"><div class="score-bar" style="width:49%"></div><span>49</span></div></td>
+              <td class="num">72</td>
+              <td class="num ">57.9</td>
+              <td class="num up">+0.198</td>
+              <td class="num">1.2x</td>
+              <td class="num">17.4</td>
+              <td class="num">10.0%</td>
+            </tr>
+            <tr>
+              <td class="sym"><strong>HSG</strong><br><span class="meta-text">Thep</span></td>
+              <td><span class="s-badge badge-skip">SKIP</span></td>
+              <td class="num"><div class="score-bar-wrap"><div class="score-bar" style="width:47%"></div><span>47</span></div></td>
+              <td class="num">12</td>
+              <td class="num ">42.4</td>
+              <td class="num up">+0.085</td>
+              <td class="num">1.0x</td>
+              <td class="num">4.3</td>
+              <td class="num">44.0%</td>
+            </tr>
+            <tr>
+              <td class="sym"><strong>PVI</strong><br><span class="meta-text">Ngan hang</span></td>
+              <td><span class="s-badge badge-skip">SKIP</span></td>
+              <td class="num"><div class="score-bar-wrap"><div class="score-bar" style="width:47%"></div><span>47</span></div></td>
+              <td class="num">77</td>
+              <td class="num ">44.4</td>
+              <td class="num dn">-0.024</td>
+              <td class="num">1.9x</td>
+              <td class="num">21.6</td>
+              <td class="num">7.0%</td>
+            </tr>
+            <tr>
+              <td class="sym"><strong>REE</strong><br><span class="meta-text">Bat dong san</span></td>
+              <td><span class="s-badge badge-skip">SKIP</span></td>
+              <td class="num"><div class="score-bar-wrap"><div class="score-bar" style="width:47%"></div><span>47</span></div></td>
+              <td class="num">51</td>
+              <td class="num up">31.5</td>
+              <td class="num up">+0.390</td>
+              <td class="num">0.7x</td>
+              <td class="num">12.5</td>
+              <td class="num">—</td>
+            </tr>
+            <tr>
+              <td class="sym"><strong>TCB</strong><br><span class="meta-text">Ngan hang</span></td>
+              <td><span class="s-badge badge-skip">SKIP</span></td>
+              <td class="num"><div class="score-bar-wrap"><div class="score-bar" style="width:47%"></div><span>47</span></div></td>
+              <td class="num">31</td>
+              <td class="num ">43.8</td>
+              <td class="num dn">-0.010</td>
+              <td class="num">1.9x</td>
+              <td class="num">10.1</td>
+              <td class="num">18.0%</td>
+            </tr>
+            <tr>
+              <td class="sym"><strong>TLH</strong><br><span class="meta-text">Thep</span></td>
+              <td><span class="s-badge badge-skip">SKIP</span></td>
+              <td class="num"><div class="score-bar-wrap"><div class="score-bar" style="width:45%"></div><span>45</span></div></td>
+              <td class="num">5</td>
+              <td class="num ">50.0</td>
+              <td class="num up">+0.008</td>
+              <td class="num">0.8x</td>
+              <td class="num">4.4</td>
+              <td class="num">5.0%</td>
+            </tr>
+            <tr>
+              <td class="sym"><strong>HPG</strong><br><span class="meta-text">Thep</span></td>
+              <td><span class="s-badge badge-skip">SKIP</span></td>
+              <td class="num"><div class="score-bar-wrap"><div class="score-bar" style="width:45%"></div><span>45</span></div></td>
+              <td class="num">24</td>
+              <td class="num ">41.6</td>
+              <td class="num up">+0.140</td>
+              <td class="num">1.0x</td>
+              <td class="num">6.0</td>
+              <td class="num">46.0%</td>
+            </tr>
+            <tr>
+              <td class="sym"><strong>BCM</strong><br><span class="meta-text">Khac</span></td>
+              <td><span class="s-badge badge-skip">SKIP</span></td>
+              <td class="num"><div class="score-bar-wrap"><div class="score-bar" style="width:45%"></div><span>45</span></div></td>
+              <td class="num">54</td>
+              <td class="num ">51.3</td>
+              <td class="num up">+0.067</td>
+              <td class="num">0.6x</td>
+              <td class="num">52.0</td>
+              <td class="num">6.0%</td>
+            </tr>
+            <tr>
+              <td class="sym"><strong>QNS</strong><br><span class="meta-text">Thuc pham</span></td>
+              <td><span class="s-badge badge-skip">SKIP</span></td>
+              <td class="num"><div class="score-bar-wrap"><div class="score-bar" style="width:45%"></div><span>45</span></div></td>
+              <td class="num">48</td>
+              <td class="num ">53.9</td>
+              <td class="num dn">-0.007</td>
+              <td class="num">0.4x</td>
+              <td class="num">13.8</td>
+              <td class="num">—</td>
+            </tr>
+            <tr>
+              <td class="sym"><strong>SAB</strong><br><span class="meta-text">Thuc pham</span></td>
+              <td><span class="s-badge badge-skip">SKIP</span></td>
+              <td class="num"><div class="score-bar-wrap"><div class="score-bar" style="width:44%"></div><span>44</span></div></td>
+              <td class="num">49</td>
+              <td class="num ">59.5</td>
+              <td class="num up">+0.117</td>
+              <td class="num">0.7x</td>
+              <td class="num">25.3</td>
+              <td class="num">—</td>
+            </tr>
+            <tr>
+              <td class="sym"><strong>KDH</strong><br><span class="meta-text">Bat dong san</span></td>
+              <td><span class="s-badge badge-skip">SKIP</span></td>
+              <td class="num"><div class="score-bar-wrap"><div class="score-bar" style="width:44%"></div><span>44</span></div></td>
+              <td class="num">23</td>
+              <td class="num ">47.8</td>
+              <td class="num up">+0.140</td>
+              <td class="num">1.2x</td>
+              <td class="num">28.0</td>
+              <td class="num">13.0%</td>
+            </tr>
+            <tr>
+              <td class="sym"><strong>GMD</strong><br><span class="meta-text">Van tai</span></td>
+              <td><span class="s-badge badge-skip">SKIP</span></td>
+              <td class="num"><div class="score-bar-wrap"><div class="score-bar" style="width:44%"></div><span>44</span></div></td>
+              <td class="num">79</td>
+              <td class="num ">60.4</td>
+              <td class="num up">+0.543</td>
+              <td class="num">0.8x</td>
+              <td class="num">30.6</td>
+              <td class="num">—</td>
+            </tr>
+            <tr>
+              <td class="sym"><strong>PNJ</strong><br><span class="meta-text">Thuong mai</span></td>
+              <td><span class="s-badge badge-skip">SKIP</span></td>
+              <td class="num"><div class="score-bar-wrap"><div class="score-bar" style="width:44%"></div><span>44</span></div></td>
+              <td class="num">68</td>
+              <td class="num ">48.3</td>
+              <td class="num up">+1.348</td>
+              <td class="num">1.0x</td>
+              <td class="num">21.2</td>
+              <td class="num">22.0%</td>
+            </tr>
+            <tr>
+              <td class="sym"><strong>FPT</strong><br><span class="meta-text">Cong nghe</span></td>
+              <td><span class="s-badge badge-skip">SKIP</span></td>
+              <td class="num"><div class="score-bar-wrap"><div class="score-bar" style="width:42%"></div><span>42</span></div></td>
+              <td class="num">72</td>
+              <td class="num ">44.0</td>
+              <td class="num dn">-0.104</td>
+              <td class="num">1.1x</td>
+              <td class="num">21.0</td>
+              <td class="num">—</td>
+            </tr>
+            <tr>
+              <td class="sym"><strong>HDB</strong><br><span class="meta-text">Ngan hang</span></td>
+              <td><span class="s-badge badge-skip">SKIP</span></td>
+              <td class="num"><div class="score-bar-wrap"><div class="score-bar" style="width:42%"></div><span>42</span></div></td>
+              <td class="num">25</td>
+              <td class="num ">41.8</td>
+              <td class="num dn">-0.008</td>
+              <td class="num">1.1x</td>
+              <td class="num">10.2</td>
+              <td class="num">18.0%</td>
+            </tr>
+            <tr>
+              <td class="sym"><strong>VPB</strong><br><span class="meta-text">Ngan hang</span></td>
+              <td><span class="s-badge badge-skip">SKIP</span></td>
+              <td class="num"><div class="score-bar-wrap"><div class="score-bar" style="width:40%"></div><span>40</span></div></td>
+              <td class="num">26</td>
+              <td class="num ">47.7</td>
+              <td class="num up">+0.001</td>
+              <td class="num">1.3x</td>
+              <td class="num">13.5</td>
+              <td class="num">18.0%</td>
+            </tr>
+            <tr>
+              <td class="sym"><strong>DXG</strong><br><span class="meta-text">Xay dung</span></td>
+              <td><span class="s-badge badge-skip">SKIP</span></td>
+              <td class="num"><div class="score-bar-wrap"><div class="score-bar" style="width:40%"></div><span>40</span></div></td>
+              <td class="num">13</td>
+              <td class="num ">41.9</td>
+              <td class="num up">+0.064</td>
+              <td class="num">0.7x</td>
+              <td class="num">18.0</td>
+              <td class="num">—</td>
+            </tr>
+            <tr>
+              <td class="sym"><strong>DIG</strong><br><span class="meta-text">Xay dung</span></td>
+              <td><span class="s-badge badge-skip">SKIP</span></td>
+              <td class="num"><div class="score-bar-wrap"><div class="score-bar" style="width:40%"></div><span>40</span></div></td>
+              <td class="num">13</td>
+              <td class="num ">43.6</td>
+              <td class="num up">+0.058</td>
+              <td class="num">0.6x</td>
+              <td class="num">50.6</td>
+              <td class="num">18.0%</td>
+            </tr>
+            <tr>
+              <td class="sym"><strong>VHM</strong><br><span class="meta-text">Bat dong san</span></td>
+              <td><span class="s-badge badge-skip">SKIP</span></td>
+              <td class="num"><div class="score-bar-wrap"><div class="score-bar" style="width:39%"></div><span>39</span></div></td>
+              <td class="num">135</td>
+              <td class="num up">36.8</td>
+              <td class="num dn">-2.479</td>
+              <td class="num">1.6x</td>
+              <td class="num">9.2</td>
+              <td class="num">—</td>
+            </tr>
+            <tr>
+              <td class="sym"><strong>ELC</strong><br><span class="meta-text">Cong nghe</span></td>
+              <td><span class="s-badge badge-skip">SKIP</span></td>
+              <td class="num"><div class="score-bar-wrap"><div class="score-bar" style="width:39%"></div><span>39</span></div></td>
+              <td class="num">17</td>
+              <td class="num ">56.3</td>
+              <td class="num up">+0.101</td>
+              <td class="num">1.3x</td>
+              <td class="num">33.8</td>
+              <td class="num">13.0%</td>
+            </tr>
+            <tr>
+              <td class="sym"><strong>MWG</strong><br><span class="meta-text">Thuong mai</span></td>
+              <td><span class="s-badge badge-skip">SKIP</span></td>
+              <td class="num"><div class="score-bar-wrap"><div class="score-bar" style="width:39%"></div><span>39</span></div></td>
+              <td class="num">79</td>
+              <td class="num ">49.7</td>
+              <td class="num up">+0.337</td>
+              <td class="num">1.0x</td>
+              <td class="num">19.8</td>
+              <td class="num">47.0%</td>
+            </tr>
+            <tr>
+              <td class="sym"><strong>NKG</strong><br><span class="meta-text">Thep</span></td>
+              <td><span class="s-badge badge-skip">SKIP</span></td>
+              <td class="num"><div class="score-bar-wrap"><div class="score-bar" style="width:39%"></div><span>39</span></div></td>
+              <td class="num">13</td>
+              <td class="num up">29.7</td>
+              <td class="num dn">-0.033</td>
+              <td class="num">0.8x</td>
+              <td class="num">3.8</td>
+              <td class="num">—</td>
+            </tr>
+            <tr>
+              <td class="sym"><strong>MBB</strong><br><span class="meta-text">Ngan hang</span></td>
+              <td><span class="s-badge badge-skip">SKIP</span></td>
+              <td class="num"><div class="score-bar-wrap"><div class="score-bar" style="width:39%"></div><span>39</span></div></td>
+              <td class="num">25</td>
+              <td class="num ">50.6</td>
+              <td class="num up">+0.078</td>
+              <td class="num">1.0x</td>
+              <td class="num">8.6</td>
+              <td class="num">22.0%</td>
+            </tr>
+            <tr>
+              <td class="sym"><strong>PC1</strong><br><span class="meta-text">Khac</span></td>
+              <td><span class="s-badge badge-skip">SKIP</span></td>
+              <td class="num"><div class="score-bar-wrap"><div class="score-bar" style="width:39%"></div><span>39</span></div></td>
+              <td class="num">20</td>
+              <td class="num ">50.3</td>
+              <td class="num up">+0.264</td>
+              <td class="num">0.4x</td>
+              <td class="num">11.4</td>
+              <td class="num">12.0%</td>
+            </tr>
+            <tr>
+              <td class="sym"><strong>VIC</strong><br><span class="meta-text">Bat dong san</span></td>
+              <td><span class="s-badge badge-skip">SKIP</span></td>
+              <td class="num"><div class="score-bar-wrap"><div class="score-bar" style="width:37%"></div><span>37</span></div></td>
+              <td class="num">192</td>
+              <td class="num up">39.1</td>
+              <td class="num dn">-2.131</td>
+              <td class="num">1.3x</td>
+              <td class="num">84.2</td>
+              <td class="num">—</td>
+            </tr>
+            <tr>
+              <td class="sym"><strong>PDR</strong><br><span class="meta-text">Bat dong san</span></td>
+              <td><span class="s-badge badge-skip">SKIP</span></td>
+              <td class="num"><div class="score-bar-wrap"><div class="score-bar" style="width:37%"></div><span>37</span></div></td>
+              <td class="num">15</td>
+              <td class="num ">41.9</td>
+              <td class="num dn">-0.018</td>
+              <td class="num">0.8x</td>
+              <td class="num">25.1</td>
+              <td class="num">27.0%</td>
+            </tr>
+            <tr>
+              <td class="sym"><strong>LPB</strong><br><span class="meta-text">Ngan hang</span></td>
+              <td><span class="s-badge badge-skip">SKIP</span></td>
+              <td class="num"><div class="score-bar-wrap"><div class="score-bar" style="width:37%"></div><span>37</span></div></td>
+              <td class="num">47</td>
+              <td class="num ">41.6</td>
+              <td class="num dn">-0.407</td>
+              <td class="num">0.6x</td>
+              <td class="num">9.3</td>
+              <td class="num">18.0%</td>
+            </tr>
+            <tr>
+              <td class="sym"><strong>PLX</strong><br><span class="meta-text">Dau khi</span></td>
+              <td><span class="s-badge badge-skip">SKIP</span></td>
+              <td class="num"><div class="score-bar-wrap"><div class="score-bar" style="width:37%"></div><span>37</span></div></td>
+              <td class="num">39</td>
+              <td class="num ">43.3</td>
+              <td class="num dn">-0.219</td>
+              <td class="num">0.5x</td>
+              <td class="num">21.6</td>
+              <td class="num">—</td>
+            </tr>
+            <tr>
+              <td class="sym"><strong>MSN</strong><br><span class="meta-text">Thuc pham</span></td>
+              <td><span class="s-badge badge-skip">SKIP</span></td>
+              <td class="num"><div class="score-bar-wrap"><div class="score-bar" style="width:37%"></div><span>37</span></div></td>
+              <td class="num">72</td>
+              <td class="num ">42.9</td>
+              <td class="num dn">-0.046</td>
+              <td class="num">0.8x</td>
+              <td class="num">84.4</td>
+              <td class="num">12.0%</td>
+            </tr>
+            <tr>
+              <td class="sym"><strong>NVL</strong><br><span class="meta-text">Bat dong san</span></td>
+              <td><span class="s-badge badge-skip">SKIP</span></td>
+              <td class="num"><div class="score-bar-wrap"><div class="score-bar" style="width:37%"></div><span>37</span></div></td>
+              <td class="num">13</td>
+              <td class="num up">35.7</td>
+              <td class="num dn">-0.027</td>
+              <td class="num">0.7x</td>
+              <td class="num">54.4</td>
+              <td class="num">8.0%</td>
+            </tr>
+            <tr>
+              <td class="sym"><strong>PVD</strong><br><span class="meta-text">Dau khi</span></td>
+              <td><span class="s-badge badge-skip">SKIP</span></td>
+              <td class="num"><div class="score-bar-wrap"><div class="score-bar" style="width:35%"></div><span>35</span></div></td>
+              <td class="num">30</td>
+              <td class="num ">45.6</td>
+              <td class="num up">+0.062</td>
+              <td class="num">0.8x</td>
+              <td class="num">432.0</td>
+              <td class="num">1.0%</td>
+            </tr>
+            <tr>
+              <td class="sym"><strong>CMG</strong><br><span class="meta-text">Cong nghe</span></td>
+              <td><span class="s-badge badge-skip">SKIP</span></td>
+              <td class="num"><div class="score-bar-wrap"><div class="score-bar" style="width:35%"></div><span>35</span></div></td>
+              <td class="num">28</td>
+              <td class="num ">48.3</td>
+              <td class="num up">+0.033</td>
+              <td class="num">0.9x</td>
+              <td class="num">26.6</td>
+              <td class="num">—</td>
+            </tr>
+            <tr>
+              <td class="sym"><strong>CTG</strong><br><span class="meta-text">Ngan hang</span></td>
+              <td><span class="s-badge badge-skip">SKIP</span></td>
+              <td class="num"><div class="score-bar-wrap"><div class="score-bar" style="width:35%"></div><span>35</span></div></td>
+              <td class="num">34</td>
+              <td class="num ">45.5</td>
+              <td class="num up">+0.038</td>
+              <td class="num">0.7x</td>
+              <td class="num">11.6</td>
+              <td class="num">17.0%</td>
+            </tr>
+            <tr>
+              <td class="sym"><strong>OIL</strong><br><span class="meta-text">Khac</span></td>
+              <td><span class="s-badge badge-skip">SKIP</span></td>
+              <td class="num"><div class="score-bar-wrap"><div class="score-bar" style="width:34%"></div><span>34</span></div></td>
+              <td class="num">14</td>
+              <td class="num up">37.6</td>
+              <td class="num dn">-0.108</td>
+              <td class="num">0.8x</td>
+              <td class="num">32.4</td>
+              <td class="num">6.0%</td>
+            </tr>
+            <tr>
+              <td class="sym"><strong>ACB</strong><br><span class="meta-text">Ngan hang</span></td>
+              <td><span class="s-badge badge-skip">SKIP</span></td>
+              <td class="num"><div class="score-bar-wrap"><div class="score-bar" style="width:34%"></div><span>34</span></div></td>
+              <td class="num">22</td>
+              <td class="num up">37.1</td>
+              <td class="num dn">-0.481</td>
+              <td class="num">0.4x</td>
+              <td class="num">9.7</td>
+              <td class="num">23.0%</td>
+            </tr>
+            <tr>
+              <td class="sym"><strong>BSR</strong><br><span class="meta-text">Dau khi</span></td>
+              <td><span class="s-badge badge-skip">SKIP</span></td>
+              <td class="num"><div class="score-bar-wrap"><div class="score-bar" style="width:34%"></div><span>34</span></div></td>
+              <td class="num">26</td>
+              <td class="num ">40.7</td>
+              <td class="num dn">-0.309</td>
+              <td class="num">0.9x</td>
+              <td class="num">13.6</td>
+              <td class="num">19.0%</td>
+            </tr>
+            <tr>
+              <td class="sym"><strong>GAS</strong><br><span class="meta-text">Dau khi</span></td>
+              <td><span class="s-badge badge-skip">SKIP</span></td>
+              <td class="num"><div class="score-bar-wrap"><div class="score-bar" style="width:32%"></div><span>32</span></div></td>
+              <td class="num">81</td>
+              <td class="num ">45.4</td>
+              <td class="num dn">-0.396</td>
+              <td class="num">0.7x</td>
+              <td class="num">21.2</td>
+              <td class="num">17.0%</td>
+            </tr>
+            <tr>
+              <td class="sym"><strong>PVS</strong><br><span class="meta-text">Dau khi</span></td>
+              <td><span class="s-badge badge-skip">SKIP</span></td>
+              <td class="num"><div class="score-bar-wrap"><div class="score-bar" style="width:32%"></div><span>32</span></div></td>
+              <td class="num">38</td>
+              <td class="num ">45.3</td>
+              <td class="num dn">-0.046</td>
+              <td class="num">0.6x</td>
+              <td class="num">22.1</td>
+              <td class="num">5.0%</td>
+            </tr>
+            <tr>
+              <td class="sym"><strong>BVH</strong><br><span class="meta-text">Ngan hang</span></td>
+              <td><span class="s-badge badge-skip">SKIP</span></td>
+              <td class="num"><div class="score-bar-wrap"><div class="score-bar" style="width:32%"></div><span>32</span></div></td>
+              <td class="num">67</td>
+              <td class="num ">45.6</td>
+              <td class="num dn">-0.006</td>
+              <td class="num">0.8x</td>
+              <td class="num">23.2</td>
+              <td class="num">8.0%</td>
+            </tr>
+            <tr>
+              <td class="sym"><strong>VCB</strong><br><span class="meta-text">Ngan hang</span></td>
+              <td><span class="s-badge badge-skip">SKIP</span></td>
+              <td class="num"><div class="score-bar-wrap"><div class="score-bar" style="width:30%"></div><span>30</span></div></td>
+              <td class="num">62</td>
+              <td class="num ">53.0</td>
+              <td class="num dn">-0.114</td>
+              <td class="num">1.3x</td>
+              <td class="num">17.0</td>
+              <td class="num">21.0%</td>
+            </tr>
+            <tr>
+              <td class="sym"><strong>VJC</strong><br><span class="meta-text">Hang khong</span></td>
+              <td><span class="s-badge badge-skip">SKIP</span></td>
+              <td class="num"><div class="score-bar-wrap"><div class="score-bar" style="width:29%"></div><span>29</span></div></td>
+              <td class="num">144</td>
+              <td class="num up">32.8</td>
+              <td class="num dn">-3.250</td>
+              <td class="num">0.9x</td>
+              <td class="num">58.3</td>
+              <td class="num">53.0%</td>
+            </tr>
+            <tr>
+              <td class="sym"><strong>VGI</strong><br><span class="meta-text">Khac</span></td>
+              <td><span class="s-badge badge-skip">SKIP</span></td>
+              <td class="num"><div class="score-bar-wrap"><div class="score-bar" style="width:25%"></div><span>25</span></div></td>
+              <td class="num">92</td>
+              <td class="num ">49.8</td>
+              <td class="num dn">-0.312</td>
+              <td class="num">0.7x</td>
+              <td class="num">—</td>
+              <td class="num">-3.0%</td>
+            </tr>
+    </table>
+    </div>
+  </div>
+
+  <!-- Price movers + Chart -->
+  <div class="row2">
+    <div class="card">
+      <div class="card-title">Bien dong gia — Top 20 ma</div>
+      <div style="overflow-x:auto">
+      <table>
+        <tr><th>Ma</th><th class="num">Gia</th><th class="num">1 Phien</th><th>KL</th></tr>
+        
         <tr>
-          <td class="sym"><strong>VCB</strong></td>
-          <td class="num">62</td>
-          <td class="num up">▲ 0.65%</td>
+          <td class="sym"><strong>NKG</strong><br><span class="meta-text">Thep</span></td>
+          <td class="num">13</td>
+          <td class="num dn">▼ 8.73%</td>
           <td class="num">
             <div style="display:flex;align-items:center;gap:6px">
               <div style="flex:1;background:#21262d;border-radius:2px;height:4px">
-                <div style="width:34%;background:#3fb950;height:4px;border-radius:2px"></div>
+                <div style="width:9%;background:#f85149;height:4px;border-radius:2px"></div>
               </div>
-              <span style="font-size:.8em;color:#8b949e">7M</span>
+              <span style="font-size:.8em;color:#8b949e">1M</span>
             </div>
           </td>
         </tr>
         <tr>
-          <td class="sym"><strong>VNM</strong></td>
-          <td class="num">59</td>
-          <td class="num dn">▼ 0.17%</td>
+          <td class="sym"><strong>VSC</strong><br><span class="meta-text">Van tai</span></td>
+          <td class="num">20</td>
+          <td class="num up">▲ 6.86%</td>
+          <td class="num">
+            <div style="display:flex;align-items:center;gap:6px">
+              <div style="flex:1;background:#21262d;border-radius:2px;height:4px">
+                <div style="width:84%;background:#3fb950;height:4px;border-radius:2px"></div>
+              </div>
+              <span style="font-size:.8em;color:#8b949e">13M</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="sym"><strong>HVN</strong><br><span class="meta-text">Hang khong</span></td>
+          <td class="num">23</td>
+          <td class="num dn">▼ 6.42%</td>
+          <td class="num">
+            <div style="display:flex;align-items:center;gap:6px">
+              <div style="flex:1;background:#21262d;border-radius:2px;height:4px">
+                <div style="width:13%;background:#f85149;height:4px;border-radius:2px"></div>
+              </div>
+              <span style="font-size:.8em;color:#8b949e">2M</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="sym"><strong>VJC</strong><br><span class="meta-text">Hang khong</span></td>
+          <td class="num">144</td>
+          <td class="num up">▲ 4.28%</td>
+          <td class="num">
+            <div style="display:flex;align-items:center;gap:6px">
+              <div style="flex:1;background:#21262d;border-radius:2px;height:4px">
+                <div style="width:6%;background:#3fb950;height:4px;border-radius:2px"></div>
+              </div>
+              <span style="font-size:.8em;color:#8b949e">1M</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="sym"><strong>VGS</strong><br><span class="meta-text">Thep</span></td>
+          <td class="num">22</td>
+          <td class="num up">▲ 2.75%</td>
+          <td class="num">
+            <div style="display:flex;align-items:center;gap:6px">
+              <div style="flex:1;background:#21262d;border-radius:2px;height:4px">
+                <div style="width:2%;background:#3fb950;height:4px;border-radius:2px"></div>
+              </div>
+              <span style="font-size:.8em;color:#8b949e">0M</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="sym"><strong>ELC</strong><br><span class="meta-text">Cong nghe</span></td>
+          <td class="num">17</td>
+          <td class="num up">▲ 2.15%</td>
+          <td class="num">
+            <div style="display:flex;align-items:center;gap:6px">
+              <div style="flex:1;background:#21262d;border-radius:2px;height:4px">
+                <div style="width:3%;background:#3fb950;height:4px;border-radius:2px"></div>
+              </div>
+              <span style="font-size:.8em;color:#8b949e">0M</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="sym"><strong>ACB</strong><br><span class="meta-text">Ngan hang</span></td>
+          <td class="num">22</td>
+          <td class="num up">▲ 1.82%</td>
+          <td class="num">
+            <div style="display:flex;align-items:center;gap:6px">
+              <div style="flex:1;background:#21262d;border-radius:2px;height:4px">
+                <div style="width:83%;background:#3fb950;height:4px;border-radius:2px"></div>
+              </div>
+              <span style="font-size:.8em;color:#8b949e">13M</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="sym"><strong>KDH</strong><br><span class="meta-text">Bat dong san</span></td>
+          <td class="num">23</td>
+          <td class="num dn">▼ 1.69%</td>
+          <td class="num">
+            <div style="display:flex;align-items:center;gap:6px">
+              <div style="flex:1;background:#21262d;border-radius:2px;height:4px">
+                <div style="width:30%;background:#f85149;height:4px;border-radius:2px"></div>
+              </div>
+              <span style="font-size:.8em;color:#8b949e">5M</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="sym"><strong>HAH</strong><br><span class="meta-text">Van tai</span></td>
+          <td class="num">56</td>
+          <td class="num up">▲ 1.46%</td>
+          <td class="num">
+            <div style="display:flex;align-items:center;gap:6px">
+              <div style="flex:1;background:#21262d;border-radius:2px;height:4px">
+                <div style="width:7%;background:#3fb950;height:4px;border-radius:2px"></div>
+              </div>
+              <span style="font-size:.8em;color:#8b949e">1M</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="sym"><strong>VGI</strong><br><span class="meta-text">Khac</span></td>
+          <td class="num">92</td>
+          <td class="num up">▲ 1.43%</td>
+          <td class="num">
+            <div style="display:flex;align-items:center;gap:6px">
+              <div style="flex:1;background:#21262d;border-radius:2px;height:4px">
+                <div style="width:2%;background:#3fb950;height:4px;border-radius:2px"></div>
+              </div>
+              <span style="font-size:.8em;color:#8b949e">0M</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="sym"><strong>PDR</strong><br><span class="meta-text">Bat dong san</span></td>
+          <td class="num">15</td>
+          <td class="num dn">▼ 1.30%</td>
+          <td class="num">
+            <div style="display:flex;align-items:center;gap:6px">
+              <div style="flex:1;background:#21262d;border-radius:2px;height:4px">
+                <div style="width:52%;background:#f85149;height:4px;border-radius:2px"></div>
+              </div>
+              <span style="font-size:.8em;color:#8b949e">8M</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="sym"><strong>NLG</strong><br><span class="meta-text">Bat dong san</span></td>
+          <td class="num">28</td>
+          <td class="num dn">▼ 1.25%</td>
           <td class="num">
             <div style="display:flex;align-items:center;gap:6px">
               <div style="flex:1;background:#21262d;border-radius:2px;height:4px">
                 <div style="width:14%;background:#f85149;height:4px;border-radius:2px"></div>
+              </div>
+              <span style="font-size:.8em;color:#8b949e">2M</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="sym"><strong>FPT</strong><br><span class="meta-text">Cong nghe</span></td>
+          <td class="num">72</td>
+          <td class="num dn">▼ 1.23%</td>
+          <td class="num">
+            <div style="display:flex;align-items:center;gap:6px">
+              <div style="flex:1;background:#21262d;border-radius:2px;height:4px">
+                <div style="width:71%;background:#f85149;height:4px;border-radius:2px"></div>
+              </div>
+              <span style="font-size:.8em;color:#8b949e">11M</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="sym"><strong>HSG</strong><br><span class="meta-text">Thep</span></td>
+          <td class="num">12</td>
+          <td class="num dn">▼ 1.23%</td>
+          <td class="num">
+            <div style="display:flex;align-items:center;gap:6px">
+              <div style="flex:1;background:#21262d;border-radius:2px;height:4px">
+                <div style="width:22%;background:#f85149;height:4px;border-radius:2px"></div>
               </div>
               <span style="font-size:.8em;color:#8b949e">3M</span>
             </div>
           </td>
         </tr>
         <tr>
-          <td class="sym"><strong>MWG</strong></td>
-          <td class="num">79</td>
-          <td class="num dn">▼ 0.38%</td>
+          <td class="sym"><strong>DIG</strong><br><span class="meta-text">Xay dung</span></td>
+          <td class="num">13</td>
+          <td class="num dn">▼ 1.14%</td>
           <td class="num">
             <div style="display:flex;align-items:center;gap:6px">
               <div style="flex:1;background:#21262d;border-radius:2px;height:4px">
                 <div style="width:20%;background:#f85149;height:4px;border-radius:2px"></div>
               </div>
-              <span style="font-size:.8em;color:#8b949e">4M</span>
+              <span style="font-size:.8em;color:#8b949e">3M</span>
             </div>
           </td>
         </tr>
         <tr>
-          <td class="sym"><strong>HPG</strong></td>
-          <td class="num">24</td>
-          <td class="num dn">▼ 0.83%</td>
+          <td class="sym"><strong>STB</strong><br><span class="meta-text">Ngan hang</span></td>
+          <td class="num">72</td>
+          <td class="num up">▲ 1.12%</td>
           <td class="num">
             <div style="display:flex;align-items:center;gap:6px">
               <div style="flex:1;background:#21262d;border-radius:2px;height:4px">
-                <div style="width:95%;background:#f85149;height:4px;border-radius:2px"></div>
+                <div style="width:41%;background:#3fb950;height:4px;border-radius:2px"></div>
               </div>
-              <span style="font-size:.8em;color:#8b949e">19M</span>
+              <span style="font-size:.8em;color:#8b949e">6M</span>
             </div>
           </td>
         </tr>
         <tr>
-          <td class="sym"><strong>TCB</strong></td>
-          <td class="num">31</td>
-          <td class="num dn">▼ 0.94%</td>
+          <td class="sym"><strong>NVL</strong><br><span class="meta-text">Bat dong san</span></td>
+          <td class="num">13</td>
+          <td class="num dn">▼ 1.11%</td>
           <td class="num">
             <div style="display:flex;align-items:center;gap:6px">
               <div style="flex:1;background:#21262d;border-radius:2px;height:4px">
-                <div style="width:83%;background:#f85149;height:4px;border-radius:2px"></div>
+                <div style="width:76%;background:#f85149;height:4px;border-radius:2px"></div>
               </div>
-              <span style="font-size:.8em;color:#8b949e">17M</span>
+              <span style="font-size:.8em;color:#8b949e">11M</span>
             </div>
           </td>
         </tr>
         <tr>
-          <td class="sym"><strong>VIC</strong></td>
-          <td class="num">192</td>
-          <td class="num dn">▼ 1.03%</td>
+          <td class="sym"><strong>GAS</strong><br><span class="meta-text">Dau khi</span></td>
+          <td class="num">81</td>
+          <td class="num dn">▼ 1.10%</td>
           <td class="num">
             <div style="display:flex;align-items:center;gap:6px">
               <div style="flex:1;background:#21262d;border-radius:2px;height:4px">
-                <div style="width:19%;background:#f85149;height:4px;border-radius:2px"></div>
+                <div style="width:6%;background:#f85149;height:4px;border-radius:2px"></div>
               </div>
-              <span style="font-size:.8em;color:#8b949e">4M</span>
+              <span style="font-size:.8em;color:#8b949e">1M</span>
             </div>
           </td>
         </tr>
         <tr>
-          <td class="sym"><strong>VHM</strong></td>
+          <td class="sym"><strong>VHM</strong><br><span class="meta-text">Bat dong san</span></td>
           <td class="num">135</td>
           <td class="num dn">▼ 1.10%</td>
           <td class="num">
             <div style="display:flex;align-items:center;gap:6px">
               <div style="flex:1;background:#21262d;border-radius:2px;height:4px">
-                <div style="width:36%;background:#f85149;height:4px;border-radius:2px"></div>
+                <div style="width:48%;background:#f85149;height:4px;border-radius:2px"></div>
               </div>
               <span style="font-size:.8em;color:#8b949e">7M</span>
             </div>
           </td>
         </tr>
         <tr>
-          <td class="sym"><strong>FPT</strong></td>
-          <td class="num">72</td>
-          <td class="num dn">▼ 1.23%</td>
+          <td class="sym"><strong>VIC</strong><br><span class="meta-text">Bat dong san</span></td>
+          <td class="num">192</td>
+          <td class="num dn">▼ 1.03%</td>
           <td class="num">
             <div style="display:flex;align-items:center;gap:6px">
               <div style="flex:1;background:#21262d;border-radius:2px;height:4px">
-                <div style="width:53%;background:#f85149;height:4px;border-radius:2px"></div>
+                <div style="width:26%;background:#f85149;height:4px;border-radius:2px"></div>
               </div>
-              <span style="font-size:.8em;color:#8b949e">11M</span>
+              <span style="font-size:.8em;color:#8b949e">4M</span>
             </div>
           </td>
         </tr>
-    </table>
+      </table>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">VN-Index — 20 phien</div>
+      <div class="chart-wrap" style="height:200px"><canvas id="vniChart2"></canvas></div>
+      <div style="margin-top:14px">
+        <div class="card-title" style="margin-bottom:6px">Huong dan giao dich</div>
+        <div style="font-size:.82em;color:#8b949e;line-height:1.8">
+          • <strong style="color:#3fb950">BUY ≥ 70</strong>: Ky thuat tot, co the xem xet mua<br>
+          • <strong style="color:#d29922">WATCH 50-69</strong>: Theo doi, cho tin hieu ro hon<br>
+          • <strong style="color:#8b949e">SKIP &lt; 50</strong>: Khong co dieu kien, bo qua<br>
+          • Stop loss: gia dong duoi MA20 hoac -7%<br>
+          • Khong giao dich khi signal = RED
+        </div>
+      </div>
+    </div>
   </div>
 
 </div>
 
 <div class="footer">
-  Trading System v0.1 &nbsp;·&nbsp; Du lieu: vnstock (VCI) + yfinance &nbsp;·&nbsp;
+  Trading System v0.2 &nbsp;·&nbsp; Data: SQL DB (dbo.VN_EOD) + yfinance &nbsp;·&nbsp;
   <a href="https://github.com/quydd56/trading-report">github.com/quydd56/trading-report</a>
+  &nbsp;·&nbsp; Updated: 23:55 18/06/2026
 </div>
 
 <script>
+// Tab switching
+function showTab(name, btn) {
+  const rows = document.querySelectorAll('#screenerTable tr[data-sig]');
+  rows.forEach(r => {
+    r.style.display = (name === 'all' || r.dataset.sig === name.toUpperCase()) ? '' : 'none';
+  });
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+}
+
+// Charts
 (function(){
-  const labels = ["2026-05-22", "2026-05-25", "2026-05-26", "2026-05-27", "2026-05-28", "2026-05-29", "2026-06-01", "2026-06-02", "2026-06-03", "2026-06-04", "2026-06-05", "2026-06-08", "2026-06-09", "2026-06-10", "2026-06-11", "2026-06-12", "2026-06-15", "2026-06-16", "2026-06-17", "2026-06-18"];
-  const data   = [1877.13, 1886.03, 1884.18, 1874.43, 1863.67, 1863.49, 1844.54, 1826.47, 1819.01, 1831.55, 1838.9, 1790.53, 1793.05, 1803.71, 1798.61, 1791.65, 1799.31, 1807.94, 1806.2, 1830.47];
+  const labels = ["2026-05-21", "2026-05-22", "2026-05-25", "2026-05-26", "2026-05-27", "2026-05-28", "2026-05-29", "2026-06-01", "2026-06-02", "2026-06-03", "2026-06-04", "2026-06-05", "2026-06-08", "2026-06-09", "2026-06-10", "2026-06-11", "2026-06-12", "2026-06-15", "2026-06-16", "2026-06-17"];
+  const data   = [1896.89, 1877.13, 1886.03, 1884.18, 1874.43, 1863.67, 1863.49, 1844.54, 1826.47, 1819.01, 1831.55, 1838.9, 1790.53, 1793.05, 1803.71, 1798.61, 1791.65, 1799.31, 1807.94, 1806.2];
   if (!labels.length) return;
-  const color = '#3fb950';
-  new Chart(document.getElementById('vniChart'), {
+  const color = '#f85149';
+
+  const cfg = {
     type: 'line',
     data: {
       labels,
@@ -302,7 +1119,7 @@
         pointRadius: 0,
         fill: true,
         backgroundColor: (ctx) => {
-          const g = ctx.chart.ctx.createLinearGradient(0,0,0,140);
+          const g = ctx.chart.ctx.createLinearGradient(0,0,0,200);
           g.addColorStop(0, color + '33');
           g.addColorStop(1, color + '00');
           return g;
@@ -321,8 +1138,20 @@
         y: { display: false, grace: '5%' }
       }
     }
-  });
+  };
+
+  new Chart(document.getElementById('vniChart'), { ...cfg, options: { ...cfg.options, maintainAspectRatio: false } });
+  new Chart(document.getElementById('vniChart2'), { ...cfg, options: { ...cfg.options, maintainAspectRatio: false } });
 })();
+
+// Add data-sig to screener rows for tab filtering
+document.querySelectorAll('table tr').forEach(tr => {
+  const badge = tr.querySelector('.s-badge');
+  if (badge) {
+    const sig = badge.textContent.trim();
+    tr.dataset.sig = sig;
+  }
+});
 </script>
 </body>
 </html>
