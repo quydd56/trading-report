@@ -2,32 +2,96 @@
 <html lang="vi">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Trading Report - Test</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Trading Report — 18/06/2026</title>
 <style>
-  body { font-family: Arial, sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; background: #f5f5f5; }
-  .card { background: white; border-radius: 8px; padding: 20px; margin: 16px 0; box-shadow: 0 2px 4px rgba(0,0,0,.1); }
-  h1 { color: #1a1a2e; } h2 { color: #16213e; border-bottom: 2px solid #0f3460; padding-bottom: 8px; }
-  .green { color: #27ae60; font-weight: bold; }
-  .ts { color: #888; font-size: 0.85em; }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0d1117;color:#c9d1d9;min-height:100vh}
+  .header{background:linear-gradient(135deg,#1a1a2e,#16213e);padding:20px;text-align:center;border-bottom:1px solid #30363d}
+  .header h1{color:#58a6ff;font-size:1.4em;letter-spacing:1px}
+  .header .ts{color:#8b949e;font-size:.85em;margin-top:4px}
+  .container{max-width:900px;margin:0 auto;padding:16px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-bottom:16px}
+  .card{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:16px}
+  .card h2{color:#58a6ff;font-size:1em;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid #30363d}
+  .vni-main{font-size:2em;font-weight:700;color:#c9d1d9}
+  .vni-chg{font-size:1.1em;margin:4px 0}
+  .vni-meta{color:#8b949e;font-size:.82em;margin-top:8px}
+  .signal{display:inline-block;padding:6px 18px;border-radius:20px;font-weight:700;font-size:1em;margin:8px 0}
+  .signal.green{background:#1a4731;color:#3fb950;border:1px solid #3fb950}
+  .signal.yellow{background:#3d2c00;color:#d29922;border:1px solid #d29922}
+  .signal.red{background:#3d0f0f;color:#f85149;border:1px solid #f85149}
+  table{width:100%;border-collapse:collapse;font-size:.9em}
+  th{color:#8b949e;font-weight:500;text-align:left;padding:6px 8px;border-bottom:1px solid #30363d}
+  td{padding:7px 8px;border-bottom:1px solid #21262d}
+  tr:last-child td{border:none}
+  .up{color:#3fb950;font-weight:600}
+  .dn{color:#f85149;font-weight:600}
+  .flat{color:#8b949e}
+  .footer{text-align:center;color:#8b949e;font-size:.8em;padding:24px;border-top:1px solid #30363d;margin-top:8px}
+  .ma-bar{background:#21262d;border-radius:4px;padding:8px 12px;margin-top:8px;font-size:.85em}
+  @media(max-width:600px){.vni-main{font-size:1.6em}}
 </style>
 </head>
 <body>
-  <h1>Vietnam Trading Report</h1>
-  <p class="ts">Generated: 2026-06-18 22:17 | Source: trading_master.ipynb</p>
-  <div class="card">
-    <h2>Ket noi Pipeline</h2>
-    <p class="green">Pipeline OK</p>
-    <ul>
-      <li>vnstock 4.x: OK</li>
-      <li>yfinance: OK</li>
-      <li>SQL ts_app: OK (8 tables)</li>
-      <li>GitHub Push: TESTING...</li>
-    </ul>
+<div class="header">
+  <h1>VIETNAM TRADING REPORT</h1>
+  <div class="ts">Cap nhat: 18/06/2026 22:25 | quydd56.github.io/trading-report</div>
+</div>
+<div class="container">
+
+  <!-- Row 1: VN-Index + Signal -->
+  <div class="grid">
+    <div class="card">
+      <h2>VN-Index</h2>
+      <div class="vni-main">0.00</div>
+      <div class="vni-chg up">0.00%</div>
+      <div style="margin:10px 0"></div>
+      <div class="vni-meta">Khoi luong: 0.00B | MA20: 0.0</div>
+      <div class="ma-bar">VN-Index TREN MA20 — Tich cuc</div>
+    </div>
+    <div class="card">
+      <h2>Tin hieu thi truong</h2>
+      <div style="text-align:center;padding:16px 0">
+        <div class="signal yellow">YELLOW</div>
+        <p style="color:#8b949e;font-size:.9em;margin-top:12px">Thi truong trung tinh</p>
+      </div>
+      <div class="ma-bar" style="margin-top:16px">
+        <strong>Nguyen tac:</strong><br>
+        GREEN: giao dich binh thuong<br>
+        YELLOW: giam size 50%<br>
+        RED: khong mo vi the moi
+      </div>
+    </div>
   </div>
-  <div class="card">
-    <h2>Thi truong</h2>
-    <p>Day la bao cao thu nghiem. Bao cao that se co du lieu thi truong.</p>
+
+  <!-- Row 2: Macro + Stocks -->
+  <div class="grid">
+    <div class="card">
+      <h2>Macro Quoc te</h2>
+      <table>
+        <tr><th>Chi so</th><th>Gia</th><th>1D</th></tr>
+        <tr><td>SP500</td><td>7,484.66</td><td class='up'>+0.87%</td></tr><tr><td>Gold</td><td>4,267.20</td><td class='dn'>-2.10%</td></tr><tr><td>DXY</td><td>100.61</td><td class='up'>+0.52%</td></tr><tr><td>Oil</td><td>73.19</td><td class='dn'>-4.69%</td></tr>
+      </table>
+    </div>
+    <div class="card">
+      <h2>Co phieu theo doi</h2>
+      <table>
+        <tr><th>Ma</th><th>Gia</th><th>1D</th><th>KLGD</th></tr>
+        <tr>
+          <td><strong>MSN</strong></td>
+          <td>24,500.00</td>
+          <td class='dn'>-0.61%</td>
+          <td>6.4M</td>
+        </tr>
+      </table>
+    </div>
   </div>
+
+</div>
+<div class="footer">
+  Trading System v0.1 — Phase 0B | Du lieu: vnstock (VCI) + yfinance<br>
+  <a href="https://github.com/quydd56/trading-report" style="color:#58a6ff">github.com/quydd56/trading-report</a>
+</div>
 </body>
 </html>
