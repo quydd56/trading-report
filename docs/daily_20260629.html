@@ -1946,7 +1946,7 @@ function renderBigboyTab() {
 function renderForeignFlowSection() {{
   var el = document.getElementById('foreign-flow-content');
   if (!el) return;
-  var ff = (typeof FOREIGN_FLOW !== 'undefined') ? FOREIGN_FLOW : {{}};
+  var ff = (typeof FOREIGN_FLOW !== 'undefined') ? FOREIGN_FLOW : {};
   if (!ff || !ff.available || !ff.n_days) {{
     el.innerHTML = '<div class="card" style="margin-bottom:20px">'
       +'<div class="card-title">🌐 Dòng tiền khối ngoại</div>'
