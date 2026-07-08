@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="refresh" content="600">
+<title>Portfolio Monitor</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', sans-serif; background: #0f1117; color: #e0e0e0; padding: 16px; }
+  h2 { font-size: 1.3rem; color: #fff; }
+  h3 { font-size: 0.95rem; color: #aaa; margin-bottom: 8px; }
+  .header { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
+  .status.open { color: #4caf50; font-weight: bold; }
+  .status.closed { color: #f44336; font-weight: bold; }
+  .ts-label { color: #666; font-size: 0.8rem; }
+  .card { background: #1a1d27; border: 1px solid #2a2d3a; border-radius: 8px; padding: 14px; margin-bottom: 14px; }
+  .alert-card { border-color: #f44336; background: #1f0f0f; }
+  .alert-card ul { padding-left: 18px; color: #ff6b6b; }
+  .freeze-banner { background: #1a2a3a; border: 1px solid #3a5a7a; border-radius: 6px; padding: 8px 14px; margin-bottom: 14px; color: #7ab8d4; text-align: center; }
+  .summary { display: flex; gap: 24px; margin-bottom: 10px; }
+  .summary span { font-size: 0.9rem; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+  th { color: #888; font-weight: normal; text-align: right; padding: 4px 8px; border-bottom: 1px solid #2a2d3a; }
+  th:first-child { text-align: left; }
+  td { padding: 5px 8px; border-bottom: 1px solid #1e2130; text-align: right; }
+  td:first-child { text-align: left; }
+  .sym { font-weight: bold; color: #fff; }
+  .num { font-variant-numeric: tabular-nums; }
+  .pos { color: #4caf50; }
+  .neg { color: #f44336; }
+  .alert { color: #f44336; font-weight: bold; }
+  .warn { color: #ff9800; }
+  .ts { color: #555; font-size: 0.75rem; }
+  .small { font-size: 0.8rem; color: #888; }
+  .vnindex { font-size: 1.1rem; font-weight: bold; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h2>📊 Portfolio Monitor</h2>
+  <span class="status open">🟢 ĐANG GIAO DỊCH</span>
+  <span class="ts-label">Cập nhật: 08/07/2026 14:02:44</span>
+</div>
+
+
+
+<div class="card">
+  <h3>Thị trường</h3>
+  <span class="vnindex">VNINDEX: 1,853,620.00 (+0.29%)</span>
+</div>
+
+
+
+<div class="card">
+  <h3>Danh mục</h3>
+  <div class="summary">
+    <span>MV: <b>45,795K</b></span>
+    <span>P&amp;L hôm nay: <b class="pos">+110K</b></span>
+    <span>P&amp;L tổng: <b class="pos">+860K (+1.9%)</b></span>
+  </div>
+  <table>
+    <tr>
+      <th>CP</th><th>KL</th><th>Giá vào</th><th>Giá hiện</th>
+      <th>% ngày</th><th>MV</th><th>P&amp;L</th><th>→ Stop</th><th>KL ngày</th>
+    </tr>
+    <tr><td class="sym">HDG</td><td class="num">100</td><td class="num">18,600</td><td class="num">18,950<br><small class="ts">14:02:14</small></td><td class="num pos">+1.34%</td><td class="num">1,895K</td><td class="num pos">+35K (+1.9%)</td><td class="num ">+9.6%</td><td class="num small">1,670,600</td></tr><tr><td class="sym">HVN</td><td class="num">100</td><td class="num">23,000</td><td class="num">26,400<br><small class="ts">14:00:01</small></td><td class="num pos">+1.34%</td><td class="num">2,640K</td><td class="num pos">+340K (+14.8%)</td><td class="num ">+23.4%</td><td class="num small">1,723,400</td></tr><tr><td class="sym">LPB</td><td class="num">100</td><td class="num">51,300</td><td class="num">52,700<br><small class="ts">14:02:27</small></td><td class="num neg">-2.04%</td><td class="num">5,270K</td><td class="num pos">+140K (+2.7%)</td><td class="num ">+10.5%</td><td class="num small">1,321,100</td></tr><tr><td class="sym">PVD</td><td class="num">200</td><td class="num">31,575</td><td class="num">32,950<br><small class="ts">14:02:18</small></td><td class="num pos">+1.07%</td><td class="num">6,590K</td><td class="num pos">+275K (+4.4%)</td><td class="num ">+12.2%</td><td class="num small">1,762,600</td></tr><tr><td class="sym">PVI</td><td class="num">100</td><td class="num">73,000</td><td class="num">73,200<br><small class="ts">13:58:54</small></td><td class="num pos">+0.55%</td><td class="num">7,320K</td><td class="num pos">+20K (+0.3%)</td><td class="num ">+7.8%</td><td class="num small">6,600</td></tr><tr><td class="sym">VIC</td><td class="num">100</td><td class="num">220,300</td><td class="num">220,800<br><small class="ts">14:02:34</small></td><td class="num pos">+0.23%</td><td class="num">22,080K</td><td class="num pos">+50K (+0.2%)</td><td class="num ">+7.8%</td><td class="num small">1,403,000</td></tr>
+  </table>
+</div>
+
+<div class="card">
+  <h3>Watchlist</h3>
+  <table>
+    <tr><th>CP</th><th>Giá</th><th>% ngày</th><th>Ghi chú</th></tr>
+    <tr><td class="sym">FPT</td><td class="num">72,500<br><small class="ts">14:02:33</small></td><td class="num neg">-0.96%</td><td>Tech leader — watch for pullback entry</td></tr><tr><td class="sym">MWG</td><td class="num">79,100<br><small class="ts">14:02:36</small></td><td class="num pos">+2.06%</td><td>Retail recovery play — watch breadth recovery</td></tr><tr><td class="sym">VNM</td><td class="num">55,300<br><small class="ts">14:02:28</small></td><td class="num pos">+0.36%</td><td>Consumer staples — watch for base breakout</td></tr>
+  </table>
+</div>
+
+</body>
+</html>
