@@ -6,47 +6,52 @@
 <title>Portfolio Monitor</title>
 <style>
 * { box-sizing:border-box; margin:0; padding:0; }
-body { font-family:'Segoe UI',sans-serif; background:#0f1117; color:#e0e0e0; padding:16px; max-width:960px; margin:0 auto; }
-h2 { font-size:1.3rem; color:#fff; }
-h3 { font-size:0.78rem; color:#666; margin-bottom:10px; text-transform:uppercase; letter-spacing:.08em; }
-.header { display:flex; align-items:center; gap:16px; margin-bottom:16px; flex-wrap:wrap; }
-.status.open  { color:#4caf50; font-weight:bold; font-size:0.85rem; }
-.status.closed { color:#f44336; font-weight:bold; font-size:0.85rem; }
-.ts-label { color:#444; font-size:0.78rem; }
-.card { background:#1a1d27; border:1px solid #252836; border-radius:8px; padding:14px 16px; margin-bottom:10px; }
-.obs-card  { border-color:#3a3800; background:#181700; }
-.obs-card ul { padding-left:16px; line-height:2; font-size:0.84rem; }
-.comment-card { border-color:#1e3320; background:#0e1a10; line-height:1.9; font-size:0.84rem; }
-.freeze-banner { background:#141e28; border:1px solid #2a4a6a; border-radius:6px; padding:8px 14px; margin-bottom:10px; color:#6a9ab0; text-align:center; font-size:0.82rem; }
-.market-row { display:flex; gap:32px; align-items:baseline; flex-wrap:wrap; }
-.vni-val { font-size:1.2rem; font-weight:bold; }
-.summary { display:flex; gap:20px; margin-bottom:12px; flex-wrap:wrap; font-size:0.84rem; color:#aaa; }
-.summary b { color:#e0e0e0; }
-table { width:100%; border-collapse:collapse; font-size:0.82rem; }
-th { color:#444; font-weight:500; text-align:right; padding:5px 8px; border-bottom:1px solid #202330; white-space:nowrap; font-size:0.75rem; text-transform:uppercase; letter-spacing:.04em; }
+body { font-family:'Segoe UI',sans-serif; background:#0f1117; color:#e0e0e0; padding:16px; max-width:1040px; margin:0 auto; }
+h2 { font-size:1.25rem; color:#fff; }
+h3 { font-size:0.72rem; color:#555; margin-bottom:10px; text-transform:uppercase; letter-spacing:.1em; }
+.header { display:flex; align-items:center; gap:16px; margin-bottom:14px; flex-wrap:wrap; }
+.status.open   { color:#4caf50; font-weight:bold; font-size:0.82rem; }
+.status.closed { color:#f44336; font-weight:bold; font-size:0.82rem; }
+.ts-label { color:#3a3a3a; font-size:0.75rem; }
+.card { background:#161820; border:1px solid #222535; border-radius:8px; padding:14px 16px; margin-bottom:10px; }
+.market-card { border-color:#2a3500; background:#111500; }
+.market-body { line-height:2; font-size:0.86rem; }
+.freeze-banner { background:#111c26; border:1px solid #24445a; border-radius:6px; padding:8px 14px; margin-bottom:10px; color:#5a8aa0; text-align:center; font-size:0.8rem; }
+.top-bar { display:flex; gap:28px; align-items:baseline; flex-wrap:wrap; }
+.vni-val { font-size:1.15rem; font-weight:bold; }
+.summary { display:flex; gap:20px; margin-bottom:12px; flex-wrap:wrap; font-size:0.83rem; color:#666; }
+.summary b { color:#ccc; }
+table { width:100%; border-collapse:collapse; font-size:0.81rem; }
+th { color:#3a3a4a; font-weight:500; text-align:right; padding:5px 8px; border-bottom:1px solid #1e2030; white-space:nowrap; font-size:0.72rem; text-transform:uppercase; letter-spacing:.05em; }
 th:first-child { text-align:left; }
-td { padding:7px 8px; border-bottom:1px solid #1a1d27; text-align:right; vertical-align:top; }
+td { padding:8px 8px; border-bottom:1px solid #161820; text-align:right; vertical-align:middle; }
 td:first-child { text-align:left; }
-td.signals { text-align:left; }
-td.note { text-align:left; color:#666; font-size:0.78rem; max-width:200px; }
-.sym { font-weight:600; color:#fff; font-size:0.88rem; }
+td.signals { text-align:left; vertical-align:middle; }
+td.note { text-align:left; color:#888; font-size:0.78rem; max-width:180px; vertical-align:middle; line-height:1.5; }
+td.note-cell { text-align:left; color:#7a8a9a; font-size:0.78rem; max-width:220px; vertical-align:middle; line-height:1.5; }
+.sym { font-weight:600; color:#dde; font-size:0.86rem; }
 .num { font-variant-numeric:tabular-nums; }
 .pos  { color:#4caf50; }
-.neg  { color:#f44336; }
-.warn { color:#ff9800; }
-.dim  { color:#444; font-size:0.72rem; }
+.neg  { color:#e05050; }
+.warn { color:#e09020; }
+.dim  { color:#383838; font-size:0.7rem; }
 /* signal tags */
-.tag { display:inline-block; padding:1px 7px; border-radius:12px; font-size:0.72rem; margin:1px 2px 1px 0; white-space:nowrap; cursor:default; }
-.tag.ok       { background:#1a3320; color:#5cba6a; border:1px solid #2a5a30; }
-.tag.danger   { background:#2a1010; color:#e05050; border:1px solid #5a2020; }
-.tag.warn-tag { background:#2a2000; color:#c08010; border:1px solid #5a4000; }
-.tag.neutral  { background:#1e2030; color:#7080a0; border:1px solid #303550; }
-/* ml badges */
-.badge { display:inline-block; padding:1px 7px; border-radius:3px; font-size:0.72rem; font-weight:700; margin:1px 0; }
-.badge.buy   { background:#1b3a1b; color:#4caf50; border:1px solid #3a7a3a; }
-.badge.watch { background:#3a2e00; color:#ff9800; border:1px solid #6a5000; }
-.badge.sell  { background:#3a0f0f; color:#f44336; border:1px solid #7a2020; }
-.badge.skip  { background:#202020; color:#555; border:1px solid #383838; }
+.tag { display:inline-block; padding:2px 8px; border-radius:10px; font-size:0.7rem; margin:1px 2px 1px 0; white-space:nowrap; cursor:default; line-height:1.6; }
+.tag.ok       { background:#142a1a; color:#5ab86a; border:1px solid #1e4a28; }
+.tag.danger   { background:#280e0e; color:#d84040; border:1px solid #4a1818; }
+.tag.warn-tag { background:#281e00; color:#b87820; border:1px solid #4a3800; }
+.tag.neutral  { background:#1a1e2c; color:#6070a0; border:1px solid #282e48; }
+.badge { display:inline-block; padding:2px 8px; border-radius:4px; font-size:0.7rem; font-weight:700; margin:1px 0; }
+.badge.buy   { background:#162a16; color:#4caf50; border:1px solid #2a6a2a; }
+.badge.watch { background:#2a2200; color:#d09020; border:1px solid #5a4800; }
+.badge.sell  { background:#2a0a0a; color:#d84040; border:1px solid #6a1818; }
+.badge.skip  { background:#1c1c1c; color:#484848; border:1px solid #303030; }
+/* per-stock notes */
+.sn-row { padding:5px 0; border-bottom:1px solid #1a1d27; font-size:0.82rem; line-height:1.6; }
+.sn-row.good { color:#b0d8b0; }
+.sn-row.bad  { color:#d8a0a0; }
+.sn-row.neutral-note { color:#8890a8; }
+.sym-hl { border-bottom:1px dashed #666; cursor:help; font-weight:600; }
 [title] { cursor:help; }
 </style>
 </head>
@@ -55,24 +60,18 @@ td.note { text-align:left; color:#666; font-size:0.78rem; max-width:200px; }
 <div class="header">
   <h2>📊 Portfolio Monitor</h2>
   <span class="status closed">🔴 ĐÓNG CỬA</span>
-  <span class="ts-label">Cập nhật 08/07/2026 14:53:44</span>
+  <span class="ts-label">Cập nhật 08/07/2026 15:01:43</span>
 </div>
 
 <div class="freeze-banner">❄️ Kết quả cuối phiên — không cập nhật thêm đến phiên sau</div>
 
 <div class="card">
-  <h3>Thị trường</h3>
-  <div class="market-row">
-    <span class="vni-val">VNINDEX: N/A</span>
+  <div class="top-bar">
+    <span class="vni-val">VNINDEX —</span>
   </div>
 </div>
 
-<div class="card obs-card"><h3>⚡ Nhận định phiên</h3><ul><li>🟢 <b>HDG</b> (Danh mục): RSI=22 — quá bán, chú ý tín hiệu đảo chiều hoặc điểm vào thêm.</li><li>🟢 <b>PVI</b> (Danh mục): RSI=29 — quá bán, chú ý tín hiệu đảo chiều hoặc điểm vào thêm.</li><li>🟢 <b>VNM</b> (Watchlist): RSI=32 — quá bán, chú ý tín hiệu đảo chiều hoặc điểm vào thêm.</li><li>🔴 <b>HVN</b>: RSI=74 — quá mua, cân nhắc chốt lời một phần.</li><li>👀 <b>HDG</b>: Giá chạm đáy Bollinger (BB%=-0.14) — vùng hỗ trợ kỹ thuật, theo dõi.</li><li>⚠️ <b>HVN</b>: Giá đang áp sát biên trên Bollinger (BB%=1.02) — có thể đảo chiều ngắn hạn.</li><li>👀 Watchlist <b>VNM</b>: RSI=32 + giá ổn định — điểm vào tiềm năng nếu có xác nhận.</li></ul></div>
-
-<div class="card comment-card">
-  <h3>📝 Nhận xét danh mục</h3>
-  📈 Danh mục <b>+705K (+1.5%)</b> so với giá vốn.<br>🟢 RSI thấp: <b>HDG</b> RSI=22 — vùng quá bán, chú ý tín hiệu đảo chiều.<br>🔴 RSI cao: <b>HVN</b> RSI=74 — có thể quá mua, xem xét chốt lời.<br>🟢 RSI thấp: <b>PVI</b> RSI=29 — vùng quá bán, chú ý tín hiệu đảo chiều.
-</div>
+<div class="card market-card"><h3>⚡ Nhận định phiên</h3><div class="market-body">Danh mục phân hóa: 0 tăng / 0 giảm / 6 đi ngang.<br>👀 Theo dõi sát: <span class="sym-hl" title="RSI=22 quá bán; dưới MA20/50">HDG</span>, <span class="sym-hl" title="trên MA20/50; RSI=74 quá mua">HVN</span>, <span class="sym-hl" title="RSI=29 quá bán; dưới MA20/50">PVI</span>, <span class="sym-hl" title="RSI=32 quá bán; dưới MA20/50">VNM (W)</span></div></div>
 
 <div class="card">
   <h3>Danh mục</h3>
@@ -82,9 +81,13 @@ td.note { text-align:left; color:#666; font-size:0.78rem; max-width:200px; }
     <span>P&amp;L tổng: <b class="pos">+705K (+1.5%)</b></span>
   </div>
   <table>
-    <tr><th>Mã</th><th>Giá vào</th><th>Giá hiện</th><th>% ngày</th><th>Lời / Lỗ</th><th>Tín hiệu</th></tr>
-    <tr><td class="sym">HDG<br><small class="dim">100 cp</small></td><td class="num">18,600</td><td class="num">18,700<br><small class="dim"></small></td><td class="num pos">+0.0%</td><td class="num pos">+10K<br><small>(+0.5%)</small></td><td class="signals"><span class="tag ok" title="RSI=22 — vùng quá bán">RSI 22 thấp</span> <span class="tag neutral"><span class="neg">↓ 3MA</span></span> <span class="badge watch" title="RSI=22.3 oversold (mua manh); Duoi MA20 (yeu); BB%=-0.14 sat day Bollinger; Volume x2.7 trung binh (xac nhan manh)">WATCH</span></td></tr><tr><td class="sym">HVN<br><small class="dim">200 cp</small></td><td class="num">24,750</td><td class="num">26,050<br><small class="dim"></small></td><td class="num pos">+0.0%</td><td class="num pos">+260K<br><small>(+5.3%)</small></td><td class="signals"><span class="tag warn-tag" title="RSI=74 — vùng quá mua">RSI 74 cao</span> <span class="tag neutral"><span class="warn">↑ 2MA</span></span> <span class="badge skip" title="RSI=73.9 overbought (canh bao); MACD hist duong (0.303); Tren ca MA20 va MA50; Volume x1.6 (xac nhan)">SKIP</span></td></tr><tr><td class="sym">LPB<br><small class="dim">100 cp</small></td><td class="num">51,300</td><td class="num">53,800<br><small class="dim"></small></td><td class="num pos">+0.0%</td><td class="num pos">+250K<br><small>(+4.9%)</small></td><td class="signals"><span class="tag neutral"><span class="pos">↑ 3MA</span></span> <span class="badge skip" title="MACD hist duong (0.147); Tren ca MA20 va MA50; Volume thap x0.7">SKIP</span></td></tr><tr><td class="sym">PVD<br><small class="dim">200 cp</small></td><td class="num">31,575</td><td class="num">32,600<br><small class="dim"></small></td><td class="num pos">+0.0%</td><td class="num pos">+205K<br><small>(+3.2%)</small></td><td class="signals"><span class="tag neutral"><span class="pos">↑ 3MA</span></span> <span class="badge skip" title="MACD hist duong (0.142); Tren ca MA20 va MA50">SKIP</span></td></tr><tr><td class="sym">PVI<br><small class="dim">100 cp</small></td><td class="num">73,000</td><td class="num">72,800<br><small class="dim"></small></td><td class="num pos">+0.0%</td><td class="num neg">-20K<br><small>(-0.3%)</small></td><td class="signals"><span class="tag ok" title="RSI=29 — vùng quá bán">RSI 29 thấp</span> <span class="tag neutral"><span class="neg">↓ 3MA</span></span> <span class="badge skip" title="RSI=29.2 oversold (mua manh); Duoi MA20 (yeu); BB%=0.12 sat day Bollinger; Volume thap x0.3">SKIP</span></td></tr><tr><td class="sym">VIC<br><small class="dim">100 cp</small></td><td class="num">220,300</td><td class="num">220,300<br><small class="dim"></small></td><td class="num pos">+0.0%</td><td class="num pos">+0K<br><small>(+0.0%)</small></td><td class="signals"><span class="tag neutral"><span class="pos">↑ 3MA</span></span> <span class="badge skip" title="MACD hist duong (0.338); Tren ca MA20 va MA50; Volume thap x0.9">SKIP</span></td></tr>
+    <tr><th>Mã</th><th>Giá vào</th><th>Giá hiện</th><th>% ngày</th><th>Lời / Lỗ</th><th>Tín hiệu</th><th>Nhận xét</th></tr>
+    <tr><td class="sym">🟡 HDG<br><small class="dim">100 cp</small></td><td class="num">18,600</td><td class="num">18,700<br><small class="dim"></small></td><td class="num pos">+0.0%</td><td class="num pos">+10K<br><small>(+0.5%)</small></td><td class="signals"><span class="tag ok" title="RSI=22 — vùng quá bán">RSI 22 thấp</span> <span class="tag neutral"><span class="neg">↓ 3MA</span></span> <span class="badge watch" title="RSI=22.3 oversold (mua manh); Duoi MA20 (yeu); BB%=-0.14 sat day Bollinger; Volume x2.7 trung binh (xac nhan manh)">WATCH</span></td><td class="note-cell">dưới MA20 & MA50 — xu hướng yếu; RSI 22 quá bán mạnh — theo dõi đảo chiều</td></tr><tr><td class="sym">🟡 HVN<br><small class="dim">200 cp</small></td><td class="num">24,750</td><td class="num">26,050<br><small class="dim"></small></td><td class="num pos">+0.0%</td><td class="num pos">+260K<br><small>(+5.3%)</small></td><td class="signals"><span class="tag warn-tag" title="RSI=74 — vùng quá mua">RSI 74 cao</span> <span class="tag neutral"><span class="warn">↑ 2MA</span></span> <span class="badge skip" title="RSI=73.9 overbought (canh bao); MACD hist duong (0.303); Tren ca MA20 va MA50; Volume x1.6 (xac nhan)">SKIP</span></td><td class="note-cell">trên MA20/50 — mid-term tích cực; RSI 74 quá mua — cân nhắc chốt lời</td></tr><tr><td class="sym">🟡 LPB<br><small class="dim">100 cp</small></td><td class="num">51,300</td><td class="num">53,800<br><small class="dim"></small></td><td class="num pos">+0.0%</td><td class="num pos">+250K<br><small>(+4.9%)</small></td><td class="signals"><span class="tag neutral"><span class="pos">↑ 3MA</span></span> <span class="badge skip" title="MACD hist duong (0.147); Tren ca MA20 va MA50; Volume thap x0.7">SKIP</span></td><td class="note-cell">trên 3 MA — trend tốt</td></tr><tr><td class="sym">🟡 PVD<br><small class="dim">200 cp</small></td><td class="num">31,575</td><td class="num">32,600<br><small class="dim"></small></td><td class="num pos">+0.0%</td><td class="num pos">+205K<br><small>(+3.2%)</small></td><td class="signals"><span class="tag neutral"><span class="pos">↑ 3MA</span></span> <span class="badge skip" title="MACD hist duong (0.142); Tren ca MA20 va MA50">SKIP</span></td><td class="note-cell">trên 3 MA — trend tốt</td></tr><tr><td class="sym">🟡 PVI<br><small class="dim">100 cp</small></td><td class="num">73,000</td><td class="num">72,800<br><small class="dim"></small></td><td class="num pos">+0.0%</td><td class="num neg">-20K<br><small>(-0.3%)</small></td><td class="signals"><span class="tag ok" title="RSI=29 — vùng quá bán">RSI 29 thấp</span> <span class="tag neutral"><span class="neg">↓ 3MA</span></span> <span class="badge skip" title="RSI=29.2 oversold (mua manh); Duoi MA20 (yeu); BB%=0.12 sat day Bollinger; Volume thap x0.3">SKIP</span></td><td class="note-cell">dưới MA20 & MA50 — xu hướng yếu; RSI 29 quá bán mạnh — theo dõi đảo chiều</td></tr><tr><td class="sym">🟡 VIC<br><small class="dim">100 cp</small></td><td class="num">220,300</td><td class="num">220,300<br><small class="dim"></small></td><td class="num pos">+0.0%</td><td class="num pos">+0K<br><small>(+0.0%)</small></td><td class="signals"><span class="tag neutral"><span class="pos">↑ 3MA</span></span> <span class="badge skip" title="MACD hist duong (0.338); Tren ca MA20 va MA50; Volume thap x0.9">SKIP</span></td><td class="note-cell">trên 3 MA — trend tốt</td></tr>
   </table>
+  <div style="margin-top:14px;padding-top:10px;border-top:1px solid #1e2030;">
+    <h3 style="margin-bottom:8px;">📋 Chi tiết từng cổ phiếu</h3>
+    <div class="sn-row neutral-note"><b>🟡 HDG</b>: dưới MA20 & MA50 — xu hướng yếu; RSI 22 quá bán mạnh — theo dõi đảo chiều</div><div class="sn-row neutral-note"><b>🟡 HVN</b>: trên MA20/50 — mid-term tích cực; RSI 74 quá mua — cân nhắc chốt lời</div><div class="sn-row neutral-note"><b>🟡 LPB</b>: trên 3 MA — trend tốt</div><div class="sn-row neutral-note"><b>🟡 PVD</b>: trên 3 MA — trend tốt</div><div class="sn-row neutral-note"><b>🟡 PVI</b>: dưới MA20 & MA50 — xu hướng yếu; RSI 29 quá bán mạnh — theo dõi đảo chiều</div><div class="sn-row neutral-note"><b>🟡 VIC</b>: trên 3 MA — trend tốt</div>
+  </div>
 </div>
 
 <div class="card">
