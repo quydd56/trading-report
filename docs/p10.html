@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>P10_FullMacro — Status</title>
+<style>
+body { background:#0d1117; color:#c9d1d9; font-family:-apple-system,system-ui,sans-serif;
+       margin:0; padding:20px; font-size:14px; }
+h1 { color:#f0f6fc; margin:0 0 4px; font-size:1.3em; }
+.subtitle { color:#8b949e; font-size:.85em; margin-bottom:20px; }
+.gate { display:inline-block; padding:8px 18px; border-radius:8px;
+         background:#3d0f0f; border:1px solid #f85149;
+         color:#f85149; font-size:1.2em; font-weight:700; margin-bottom:16px; }
+.section { background:#161b22; border:1px solid #30363d; border-radius:8px;
+            padding:14px; margin-bottom:16px; }
+.section h2 { margin:0 0 10px; font-size:.95em; color:#8b949e; text-transform:uppercase;
+               letter-spacing:.06em; }
+table { width:100%; border-collapse:collapse; font-size:.88em; }
+th { background:#21262d; color:#8b949e; text-align:left; padding:6px 8px;
+      border-bottom:1px solid #30363d; }
+td { padding:5px 8px; border-bottom:1px solid #21262d; }
+tr.pass td:first-child { color:#3fb950; }
+tr.fail td:first-child { color:#f85149; }
+.badge { display:inline-block; padding:2px 8px; border-radius:12px;
+          font-size:.75em; font-weight:600; }
+.badge-green { background:#1a4731; color:#3fb950; }
+.badge-red { background:#3d0f0f; color:#f85149; }
+.footer { color:#484f58; font-size:.75em; margin-top:20px; }
+</style>
+</head>
+<body>
+<h1>🎯 P10_FullMacro</h1>
+<div class="subtitle">Cập nhật: 13/07/2026 17:19 | Backtest: +5.1%/yr, PF=2.01, Win=47%</div>
+
+<div class="gate">NGỒI IM — 7/11 filters pass</div>
+
+<div class="section">
+<h2>📋 11 Điều kiện thị trường</h2>
+<table>
+<thead><tr><th>Điều kiện</th><th>Giá trị</th><th>Ngưỡng</th></tr></thead>
+<tbody><tr class="fail"><td>❌ VNI > MA20</td><td>1828.34</td><td>> 1847</td></tr>
+<tr class="fail"><td>❌ VNI > MA50</td><td>1828.34</td><td>> 1859</td></tr>
+<tr class="pass"><td>✅ VNI > MA200</td><td>1828.34</td><td>> 1768</td></tr>
+<tr class="fail"><td>❌ pct_MA50 ≥ 2%</td><td>-1.66%</td><td>≥ +2.0%</td></tr>
+<tr class="pass"><td>✅ VNI mom20d ≥ 1%</td><td>+2.0%</td><td>≥ +1.0%</td></tr>
+<tr class="fail"><td>❌ Breadth ≥ 22%</td><td>15.4%</td><td>≥ 22%</td></tr>
+<tr class="pass"><td>✅ VIX ≤ 20</td><td>15.0</td><td>≤ 20</td></tr>
+<tr class="pass"><td>✅ Gold mom20d ≤ +8%</td><td>-5.6%</td><td>≤ +8%</td></tr>
+<tr class="pass"><td>✅ SP500 mom20d ≥ -5%</td><td>+0.8%</td><td>≥ -5%</td></tr>
+<tr class="pass"><td>✅ DXY mom20d ≤ +3%</td><td>+1.6%</td><td>≤ +3%</td></tr>
+<tr class="pass"><td>✅ Oil mom20d ≥ -12%</td><td>-3.0%</td><td>≥ -12%</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="section">
+<h2>🔍 Ứng viên mua (P10 entry)</h2>
+<p style='color:#8b949e;font-size:.85em'>⚠️ Chỉ scan khi thị trường ĐỦ ĐIỀU KIỆN</p>
+<table>
+<thead><tr><th>Symbol</th><th>Score</th><th>RSI</th><th>MACD Hist</th><th>Vol Ratio</th><th>Giá</th></tr></thead>
+<tbody><tr><td colspan="6" style="color:#8b949e">Không có ứng viên</td></tr></tbody>
+</table>
+</div>
+
+<div class="section">
+<h2>💼 Danh mục P10 đang mở</h2>
+<table>
+<thead><tr><th>Symbol</th><th>Giá vào</th><th>KL</th><th>Giá hiện tại</th><th>P&L</th><th>Ngày giữ</th></tr></thead>
+<tbody><tr><td colspan="6" style="color:#8b949e">Chưa có vị thế mở</td></tr></tbody>
+</table>
+</div>
+
+<div class="section">
+<h2>⚙️ Thông số chiến lược</h2>
+<table>
+<tr><td>Stop loss</td><td>5%</td></tr>
+<tr><td>Trailing stop</td><td>7% (bật khi lãi ≥ 2%)</td></tr>
+<tr><td>Max hold</td><td>18 ngày</td></tr>
+<tr><td>RSI exit</td><td>RSI &lt; 33</td></tr>
+<tr><td>Entry RSI</td><td>40–63</td></tr>
+<tr><td>Entry score</td><td>≥ 60</td></tr>
+</table>
+</div>
+
+<div class="footer">P10_FullMacro — hệ thống riêng, không liên quan daily pipeline • 13/07/2026 17:19</div>
+</body>
+</html>
